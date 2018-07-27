@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- tab title with UNO icon-->
+    <title>Game Gallery</title>
+    <link rel="shortcut icon" href="media/favicon-uno.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="styles/responsive-cards.css" rel="stylesheet">
+    <link href="styles/game-gallery.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-black">
+
+    <div class="container"> 
+      <h1 class="text-center text-light display-4">Outreach Game Gallery</h1>
+      <hr class="border-light">
+    </div>
+
+    <div class="container mb-3"> 
+      <div class="row">
+
+        <div class="input-group col-6">
+          <div class="input-group-prepend">
+            <label class="input-group-text bg-dark text-light font-weight-bold border-dark" for="filter-camp">
+              Camp
+              <i class="fas fa-angle-down fa-lg px-2"></i>
+            </label >
+          </div>
+          <select class="custom-select text-light font-weight-bold border-dark bg-black" id="filter-camp">
+            <option value="*" selected>All</option>
+            <option value="core-element">Core Element</option>
+            <option value="st-tammany">St. Tammany</option>
+            <option value="upward-bound">Upward Bound</option>
+          </select>
+        </div>
+
+        <div class="input-group col-6">
+          <div class="input-group-prepend">
+            <label class="input-group-text bg-dark text-light font-weight-bold border-dark" for="filter-year">
+              Year
+              <i class="fas fa-angle-down fa-lg px-2"></i>
+            </label >
+          </div>
+          <select class="custom-select text-light font-weight-bold border-dark bg-black" id="filter-year">
+            <option value="*" selected>All</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card-deck text-center" id="studios">      
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="scripts/studios.js"></script>
+    <script src="scripts/create-studios.js"></script>
+    <script src="scripts/studio-filters.js"></script>
+    <script src="scripts/url-parser.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
