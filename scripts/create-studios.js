@@ -1,11 +1,10 @@
 var card_deck = document.getElementById('studios');
-
+// <p class="text-light card-subtitle p-0">Studio</p> removed after card-header div
 create_studio_card = function(studio)
 {
   let card =
     `<a id=${studio.id} class="card my-3 bg-dark text-light" href=${studio.url} target="_blank">
-      <div class="card-header pb-1" >
-        <p class="text-light card-subtitle p-0">Studio</p>
+      <div class="card-header pb-1" > 
       </div>
       <img class="card-img-top" src=${studio.logo}>
       <div class="card-body p-1 pt-2 d-flex flex-column justify-content-center" >
@@ -19,7 +18,13 @@ create_studio_card = function(studio)
   card_deck.innerHTML += card;
 }
 
-studios.sort( () => Math.random() - 0.5);                  //randomize studios
+// studios.sort( () => Math.random() - 0.5);                  //randomize studios
+//sort studios alphabetically
+studios.sort(function (a, b) {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});
 studios.forEach( (studio) => create_studio_card(studio) ); //create studio cards 
 
 
